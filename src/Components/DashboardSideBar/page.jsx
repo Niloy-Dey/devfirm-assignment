@@ -21,88 +21,88 @@ const DashboardSideBar = () => {
     <div>
 
       {/* Side bar start here and logo the below */}
-      <div class="h-[1252px] w-[345px] bg-[#383FE1] rounded-lg text-white">
-        <h1 class=" p-10 font-bold text-[#FFFFFF80] text-center font-poppins text-4xl leading-15">
+      <div class="h-[1252px] w-[345px] bg-[#CAE138] rounded-lg text-white">
+        <h1 class=" p-10 font-bold text-white  text-center font-poppins text-4xl leading-15">
           Logo
         </h1>
 
 
         {/* side bar navigation route here  */}
         <div className="w-[300px] h-[1118px] ml-[45px] ">
-          <Link href="" className=" h-[86px] flex justify-center items-center text-[#FFFFFF80] ">
-            <Image src={home} alt='' w={25} h={25} />
+          <Link href="" className=" h-[86px] flex justify-center items-center text-white">
+            <Image className='filter brightness-0' src={home} alt='' w={25} h={25} />
             <p className=' w-[140px] font-poppins pl-2 font-medium'> Dashboard</p>
           </Link>
+          
+  
 
-          <Link href="" className="flex justify-center items-center text-[#FFFFFF80] ">
-            <Image src={mobile} alt='' w={25} h={25} />
+          <Link href="" className="flex justify-center items-center text-white">
+            <Image src={mobile} className='filter brightness-0' alt='' w={25} h={25} />
             <p className=' w-[140px] font-poppins pl-2 font-medium'> Reservations</p>
           </Link>
 
 
-          <Link href="" className=" h-[86px] flex justify-center items-center text-[#FFFFFF80] ">
-            <Image src={trips} alt='' w={25} h={25} />
+          <Link href="" className=" h-[86px] flex justify-center items-center text-white">
+            <Image className='filter brightness-0' src={trips} alt='' w={25} h={25} />
             <p className=' w-[140px] font-poppins pl-2 font-medium'> Trips</p>
           </Link>
 
 
           <Link href="/dashboard/invoice" className="flex justify-center items-center rounded-l-full bg-sky-500/25 p-3 ">
-            <Image src={invoice} alt='' w={25} h={25} />
+            <Image className='filter brightness-0' src={invoice} alt='' w={25} h={25} />
             <p className=' w-[140px] font-poppins pl-2  text-white font-medium'>Invoices </p>
           </Link>
 
 
-          <Link href="" className=" h-[86px] flex justify-center items-center text-[#FFFFFF80] ">
-            <Image src={planes} alt='' w={25} h={25} />
+          <Link href="" className=" h-[86px] flex justify-center items-center text-white">
+            <Image className='filter brightness-0' src={planes} alt='' w={25} h={25} />
             <p className=' w-[140px] font-poppins pl-2 font-medium'> Planes</p>
           </Link>
 
-          <Link href="" className="flex justify-center items-center text-[#FFFFFF80] ">
-            <Image src={amenities} alt='' w={25} h={25} />
+          <Link href="" className="flex justify-center items-center text-white">
+            <Image className='filter brightness-0' src={amenities} alt='' w={25} h={25} />
             <p className=' w-[140px] font-poppins pl-2 font-medium'> Amenities</p>
           </Link>
 
-          <Link href="" className=" h-[86px] flex justify-center items-center text-[#FFFFFF80] ">
-            <Image src={contacts} alt='' w={25} h={25} />
+          <Link href="" className=" h-[86px] flex justify-center items-center text-white">
+            <Image className='filter brightness-0' src={contacts} alt='' w={25} h={25} />
             <p className=' w-[140px] font-poppins pl-2 font-medium'> Contacts</p>
           </Link>
 
-          <Link href="" className="flex justify-center items-center text-[#FFFFFF80] ">
-            <Image src={team} alt='' w={25} h={25} />
+          <Link href="" className="flex justify-center items-center text-white">
+            <Image  className='filter brightness-0' src={team} alt='' w={25} h={25} />
             <p className=' w-[140px] font-poppins pl-2 font-medium'> Team</p>
           </Link>
 
-          <Link href="" className=" h-[86px] flex justify-center items-center text-[#FFFFFF80] ">
-            <Image src={member} alt='' w={25} h={25} />
+          <Link href="" className=" h-[86px] flex justify-center items-center text-white">
+            <Image className='filter brightness-0' src={member} alt='' w={25} h={25} />
             <p className=' w-[140px] font-poppins pl-2 font-medium'> Crew Members</p>
           </Link>
 
-          <Link href="" className="flex justify-center items-center text-[#FFFFFF80] ">
-            <Image src={files} alt='' w={25} h={25} />
+          <Link href="" className="flex justify-center items-center text-white">
+            <Image className='filter brightness-0' src={files} alt='' w={25} h={25} />
             <p className=' w-[140px] font-poppins pl-2 font-medium'> Files</p>
           </Link>
 
-          <Link href="" className=" h-[86px] flex justify-center items-center text-[#FFFFFF80] ">
-            {/* <Image src={message} className='text-[#FFFF] ' alt='' w={25} h={25} /> */}
-            <FaComment size={25} />
+          <Link href="" className=" h-[86px] flex justify-center items-center text-white">
+            <Image className='filter brightness-0' src={message} alt='' w={25} h={25} />
             <p className=' w-[140px] font-poppins pl-2 font-medium'> Message</p>
           </Link>
 
-          <Link href="" className="flex justify-center items-center text-[#FFFFFF80] ">
-            {/* <Image className=''  src={calender} alt='' w={25} h={25} /> */}
-            <FaCalendar size={25} />
+          <Link href="" className="flex justify-center items-center text-white">
+            <Image className='filter brightness-0'  src={calender} alt='' w={25} h={25} />
             <p className=' w-[140px] font-poppins pl-2 font-medium'> Calendar</p>
           </Link>
 
           {/* settings button here  */}
-          <Link href="" className=" h-[86px] flex justify-center items-center text-[#FFFFFF80] ">
-            <Image src={settings} alt='' w={25} h={25} />
+          <Link href="" className=" h-[86px] flex justify-center items-center text-white">
+            <Image  className='filter brightness-0' src={settings} alt='' w={25} h={25} />
             <p className=' w-[140px] font-poppins pl-2 font-medium'> Setting</p>
           </Link>
 
           {/* Logout button here  */}
           <Link href="" className="flex justify-center items-center mt-14 text-white ">
-            <Image src={logout} alt='' w={25} h={25} />
+            <Image className='filter brightness-0' src={logout} alt='' w={25} h={25} />
             <p className=' w-[140px] font-poppins pl-2 font-medium'> Logout</p>
           </Link>
 

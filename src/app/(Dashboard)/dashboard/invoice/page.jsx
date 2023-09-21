@@ -14,7 +14,7 @@ const InvoicePage = () => {
                 </div>
 
                 <div>
-                    <Link href="/dashboard/invoice/addInvoice " class="w-[250px] flex justify-center items-center h-[64px]  py-2 rounded-[34.67px] bg-[#383FE1] text-white ">
+                    <Link href="/dashboard/invoice/addInvoice " class="w-[250px] flex justify-center items-center h-[64px]  py-2 rounded-[34.67px] bg-[#CAE138] text-white ">
                         <span className="border-2  border-white rounded-full p-1 m-2">
                             <Image alt="" className="" src={plus} />
                         </span>

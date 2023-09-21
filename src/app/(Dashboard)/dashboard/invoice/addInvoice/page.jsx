@@ -13,12 +13,9 @@ import Link from 'next/link';
 const addInvoice = () => {
 
     const [isOpen, setIsOpen] = useState(false);
-    // const [isOpenD, setIsOpenD] = useState(false);
     const [selectedOption, setSelectedOption] = useState('');
-    // const [selectedOptionD, setSelectedOptionD] = useState('');
     const [searchText, setSearchText] = useState('');
-    // const [searchTextD, setSearchTextD] = useState('');
-    const options = ['T2390', 'TR7652', 'TR7652']; // Replace with your actual options
+    const options = ['T2390', 'TR7652', 'TR7652']; 
 
 
 
@@ -73,16 +70,11 @@ const addInvoice = () => {
             description: '',
             total: '',
         };
-
-        // Add the new product to the products array
         setProducts([...products, newProduct]);
     };
 
     const handleDeleteProduct = (productId) => {
-        // Filter out the product to be deleted based on its ID
         const updatedProducts = products.filter((product) => product.id !== productId);
-
-        // Update the state with the filtered products
         setProducts(updatedProducts);
     };
 
@@ -186,13 +178,13 @@ const addInvoice = () => {
                 {/* right part */}
                 <div>
                     <p class="font-poppins pl-1 pb-3 font-bold text-lg text-black " >Plane Image</p>
-                    <div class="relative w-[230px] h-[170px]    border border-dashed border-[#383FE1] rounded-md flex items-center justify-center gap-10">
+                    <div class="relative w-[230px] h-[170px]    border border-dashed border-[#CAE138] rounded-md flex items-center justify-center gap-10">
                         <input type="file" class="opacity-0 absolute inset-0 w-full h-full cursor-pointer" name="file" id="file" />
                         <label for="file" class="flex  items-center justify-center space-y-2 cursor-pointer">
                             <Image className='w-14' alt='' src={upload} />
                             <div className='p-2'>
-                                <p className='text-[#383FE1]  font-poppins text-lg'>Upload  </p>
-                                <p className='text-[#383FE1]  font-poppins text-lg' >Plane Image</p>
+                                <p className='text-[#CAE138]  font-poppins text-lg'>Upload  </p>
+                                <p className='text-[#CAE138]  font-poppins text-lg' >Plane Image</p>
                             </div>
                         </label>
                     </div>
@@ -281,7 +273,7 @@ const addInvoice = () => {
                     </tbody>
                 </table>
 
-                <button onClick={handleAddProduct} className="text-blue-700 font-bold text-lg my-6 mt-10">+ Add Product </button>
+                <button onClick={handleAddProduct} className="text-[#CAE138] font-bold text-lg my-6 mt-10">+ Add Product </button>
                 {/* Add product start here  */}
                 <AddProduct></AddProduct>
             </section>

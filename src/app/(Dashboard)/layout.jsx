@@ -1,8 +1,7 @@
 import React from 'react';
 import DashboardHeader from '../../Components/DashboardHeader/page';
 import DashboardSideBar from '../../Components/DashboardSideBar/page';
-import InvoicePage from './dashboard/invoice/page';
-import InvoiceList from './dashboard/invoiceList/page';
+
 
 const DashboardLayout = ({ children }) => {
     return (
@@ -17,8 +16,6 @@ const DashboardLayout = ({ children }) => {
 
                     <div className=''>
                         <DashboardHeader></DashboardHeader>
-                        {/* <InvoicePage></InvoicePage> */}
-                        {/* <InvoiceList></InvoiceList> */}
                         {children}
                     </div>
                 </div>
