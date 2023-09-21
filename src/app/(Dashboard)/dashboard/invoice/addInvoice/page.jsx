@@ -211,9 +211,9 @@ const addInvoice = () => {
                     <thead>
                         <tr className=" flex border-t-2 border-b-2 border-gray-100">
                             <th htmlFor="dropdown" className="font-poppins   w-[170px] flex items-center py-5 font-bold text-center font-poppins text-gray-900 text-sm ">Products Type<Image className=" ml-1" alt="" src={increase} /></th>
-                            <th className="font-poppins  w-[260px] flex items-center  py-5 font-bold text-center font-poppins text-gray-900 text-sm">Products<Image className=" ml-1" alt="" src={increase} /> </th>
-                            <th className="font-poppins  w-[390px]   py-5 font-bold text-center font-poppins text-gray-900 text-sm"> Description </th>
-                            <th className="font-poppins ml-52 py-5 font-bold text-center font-poppins text-gray-900 text-sm"> Total</th>
+                            <th className="font-poppins  w-[260px] flex items-center  py-5 font-bold ml-6 font-poppins text-gray-900  text-sm">Products<Image className=" ml-1" alt="" src={increase} /> </th>
+                            <th className="font-poppins  w-[390px]   py-5 font-bold ml-4 font-poppins text-gray-900 text-sm"> Description </th>
+                            <th className="font-poppins ml-[170px] py-5 font-bold   font-poppins text-gray-900 text-sm"> Total</th>
                         </tr>
                     </thead>
 
