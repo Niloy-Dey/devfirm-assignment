@@ -9,6 +9,7 @@ import Ddelete from '/public/images/delete.png'
 import search from '/public/images/search.png'
 import AddProduct from '../addProduct/page'
 import { useState } from 'react';
+import Link from 'next/link';
 const addInvoice = () => {
 
     const [isOpen, setIsOpen] = useState(false);
@@ -47,6 +48,44 @@ const addInvoice = () => {
     const handleTypeInputChange = (e) => {
         setSearchTextD(e.target.value);
     };
+
+
+
+
+
+
+    const [products, setProducts] = useState([
+        {
+            id: 1,
+            productType: '',
+            product: '',
+            description: '',
+            total: '',
+        },
+    ]);
+
+    const handleAddProduct = () => {
+        // Create a new product object with a unique ID
+        const newProduct = {
+            id: Date.now(),
+            productType: '',
+            product: '',
+            description: '',
+            total: '',
+        };
+
+        // Add the new product to the products array
+        setProducts([...products, newProduct]);
+    };
+
+    const handleDeleteProduct = (productId) => {
+        // Filter out the product to be deleted based on its ID
+        const updatedProducts = products.filter((product) => product.id !== productId);
+
+        // Update the state with the filtered products
+        setProducts(updatedProducts);
+    };
+
 
 
 
@@ -177,68 +216,72 @@ const addInvoice = () => {
                             <th className="font-poppins ml-52 py-5 font-bold text-center font-poppins text-gray-900 text-sm"> Total</th>
                         </tr>
                     </thead>
+
                     <tbody>
-                        <tr className='flex gap-4'>
-                            <td>
-                                <div className='w-[170px] h-[60px]'>
-                                    <div class="relative  border border-gray-300 rounded-lg mt-4 p-3">
-                                        <select id="dropdown" class="appearance-none bg-transparent border-none outline-none w-full pr-8 pt-1 font-poppins text-lg pl-2">
-                                            <option>Plane</option>
-                                            <option>Trips IDs</option>
-                                            <option>Flowers</option>
-                                            <option>Drinks</option>
-                                            <option>Foods</option>
-                                            <option>Airbus</option>
-                                            <option>Helicopters</option>
-                                        </select>
-                                        <div class="absolute inset-y-0 right-0 flex items-center  pointer-events-none">
-                                            <FaAngleDown className="h-[20px] w-[20px] mr-4 text-gray-400" />
+                        {products.map((product, index) => (
+                            <tr className="flex gap-4" key={product.id}>
+                                <td>
+                                    <div className="w-[170px] h-[60px]">
+                                        <div className="relative border border-gray-300 rounded-lg mt-4 p-3">
+                                            <select
+                                                id={`dropdown-${index}`}
+                                                className="appearance-none bg-transparent border-none outline-none w-full pr-8 pt-1 font-poppins text-lg pl-2"
+                                            >
+                                                <option>Plane</option>
+                                                <option>Trips IDs</option>
+                                                <option>Flowers</option>
+                                                <option>Drinks</option>
+                                                <option>Foods</option>
+                                                <option>Airbus</option>
+                                                <option>Helicopters</option>
+                                            </select>
+                                            <div className="absolute inset-y-0 right-0 flex items-center pointer-events-none">
+                                                <FaAngleDown className="h-[20px] w-[20px] mr-4 text-gray-400" />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </td>
+                                </td>
 
-
-                            <td>
-                                <div className='w-[260px]  h-[60px]'>
-                                    <div class="relative  border border-gray-300 rounded-lg mt-4 p-3">
-                                        <select id="dropdown" class="appearance-none bg-transparent border-none outline-none w-full pr-8 pt-1 font-poppins text-lg pl-2">
-                                            <option>Falcone 8x TBA</option>
-                                            <option>Falcone 8x TBA</option>
-                                        </select>
-                                        <div class="absolute inset-y-0 right-0 flex items-center  pointer-events-none">
-                                            <FaAngleDown className="h-[20px] w-[20px] mr-4 text-gray-400" />
+                                <td>
+                                    <div className="w-[260px] h-[60px]">
+                                        <div className="relative border border-gray-300 rounded-lg mt-4 p-3">
+                                            <select
+                                                id={`dropdown-${index}`}
+                                                className="appearance-none bg-transparent border-none outline-none w-full pr-8 pt-1 font-poppins text-lg pl-2"
+                                            >
+                                                <option>Falcone 8x TBA</option>
+                                                <option>Falcone 8x TBA</option>
+                                            </select>
+                                            <div className="absolute inset-y-0 right-0 flex items-center pointer-events-none">
+                                                <FaAngleDown className="h-[20px] w-[20px] mr-4 text-gray-400" />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </td>
+                                </td>
 
-
-
-                            <td>
-                                <div className='w-[390px]  h-[60px]'>
-                                    <div class="relative  border border-gray-300 rounded-lg mt-4 p-3">
-                                        <p class="appearance-none bg-transparent border-none outline-none w-full pr-8 pt-1 font-poppins text-lg pl-2">product for Trip t85475</p>
+                                <td>
+                                    <div className="w-[390px] h-[60px]">
+                                        <div className="relative border border-gray-300 rounded-lg mt-4 p-3">
+                                            <p className="appearance-none bg-transparent border-none outline-none w-full pr-8 pt-1 font-poppins text-lg pl-2">
+                                                product for Trip t85475
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                            </td>
-
-
-
-                            <td>
-                                <div className='w-[200px] ml-40 flex mt-1 items-center justify-between h-[60px]'>
-                                    <div class="relative  border border-gray-300 rounded-lg mt-4 p-3">
-                                        <p class="appearance-none bg-transparent border-none outline-none w-full pr-8 pt-1 font-poppins text-lg pl-2">11.500.000</p>
+                                </td>
+                                <td>
+                                    <div className='w-[200px] ml-40 flex mt-1 items-center justify-between h-[60px]'>
+                                        <div class="relative  border border-gray-300 rounded-lg mt-4 p-3">
+                                            <p class="appearance-none bg-transparent border-none outline-none w-full pr-8 pt-1 font-poppins text-lg pl-2">11.500.000</p>
+                                        </div>
+                                        <Image onClick={() => handleDeleteProduct(product.id)} className="cursor-pointer w-[60px] h-[50px] p-2 mt-3 ml-2 rounded-xl bg-red-100 " alt='' src={Ddelete} />
                                     </div>
-                                    <Image className=" w-[60px] h-[50px] p-2 mt-3 ml-2 rounded-xl bg-red-100 " alt='' src={Ddelete} />
-                                </div>
-                            </td>
-                        </tr>
+                                </td>
+                            </tr>
+                        ))}
                     </tbody>
                 </table>
 
-
-
+                <button onClick={handleAddProduct} className="text-blue-700 font-bold text-lg my-6 mt-10">+ Add Product </button>
                 {/* Add product start here  */}
                 <AddProduct></AddProduct>
             </section>

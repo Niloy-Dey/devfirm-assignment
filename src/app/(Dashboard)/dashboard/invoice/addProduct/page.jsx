@@ -1,9 +1,16 @@
-import Link from 'next/link';
+'use client'
 
+import Link from 'next/link';
+import { useState } from 'react';
 const AddProduct = () => {
+
+   
+
+
+
     return (
         <div className='pb-10'>
-            <Link href="" className='text-blue-700 font-bold text-lg my-6   mt-10'> + Add Product </Link>
+            {/* <Link href="" className='text-blue-700 font-bold text-lg my-6   mt-10'> + Add Product </Link> */}
             <hr class="w-full border-t border-gray-300 my-4" />
 
 
@@ -21,7 +28,8 @@ const AddProduct = () => {
                 <div>
                     <button className='p-4 mx-3  rounded-full w-40 font-bold text-lg text-white bg-[#383FE1] '>Save</button>
                     <button className='p-4  mx-3 border-2 border-gray-400 rounded-full w-40 font-bold text-lg text-black  '>Cancel</button>
-                    <button className='p-4 mx-3  rounded-full w-60 font-bold text-lg text-white bg-[#383FE1] '>Download Invoice</button>
+                    <Link href="/downloadInvoice"className='p-4 mx-3  rounded-full w-60 font-bold text-lg text-white bg-[#383FE1] '>Download Invoice</Link>
+                    {/* <Link href="/dashboard/invoice/addProduct/downloadInvoice"className='p-4 mx-3  rounded-full w-60 font-bold text-lg text-white bg-[#383FE1] '>Download Invoice</Link> */}
                 </div>
                 <p className='text-right font-bold text-[#383FE1] text-lg'>Subtotal: 16.550.000</p>
             </div>
