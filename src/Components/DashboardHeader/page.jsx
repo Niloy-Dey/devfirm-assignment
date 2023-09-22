@@ -9,11 +9,11 @@ const DashboardHeader = () => {
 
                 {/*search bar start here  */}
                 <div className='mb-10'>
-                    <div class="w-[476px]   h-[55px] absolute rounded-full border border-gray-300 flex items-center p-3">
-                        <div class="text-gray-400 pr-2">
+                    <div className="w-[476px]   h-[55px] absolute rounded-full border border-gray-300 flex items-center p-3">
+                        <div className="text-gray-400 pr-2">
                             <Image src={search} alt='' w={25} h={25} />
                         </div>
-                        <input type="text" placeholder="Search..." class="w-full outline-none bg-transparent" />
+                        <input type="text" placeholder="Search..." className="w-full outline-none bg-transparent" />
                     </div>
                 </div>
 

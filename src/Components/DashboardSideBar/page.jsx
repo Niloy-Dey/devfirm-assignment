@@ -13,14 +13,15 @@ import message from '/public/images/Vector (11).png.png'
 import calender from '/public/images/Vector (12).png'
 import settings from '/public/images/Vector (13).png'
 import logout from '/public/images/logout.png'
+import dropdown from '/public/images/dropdown.png'
 import Link from 'next/link';
 const DashboardSideBar = () => {
   return (
     <div>
 
       {/* Side bar start here and logo the below */}
-      <div class="h-[1252px] w-[345px] bg-[#CAE138] rounded-lg text-white">
-        <h1 class=" p-10 font-bold text-white  text-center font-poppins text-4xl leading-15">
+      <div className="h-[1252px] w-[345px] bg-[#CAE138] rounded-lg text-white">
+        <h1 className=" p-10 font-bold text-white  text-center font-poppins text-4xl leading-15">
           Logo
         </h1>
 
@@ -42,7 +43,10 @@ const DashboardSideBar = () => {
 
           <Link href="" className=" h-[86px] flex justify-center items-center text-white">
             <Image className='filter brightness-0' src={trips} alt='' w={25} h={25} />
-            <p className=' w-[140px] font-poppins pl-2 font-medium'> Trips</p>
+            <p className=' w-[140px] font-poppins pl-2 font-medium flex items-center justify-between'>
+              <span> Trips  </span>
+            <Image className='filter brightness-0' src={dropdown} alt='' w={25} h={25} />
+            </p>
           </Link>
 
 
@@ -54,12 +58,18 @@ const DashboardSideBar = () => {
 
           <Link href="" className=" h-[86px] flex justify-center items-center text-white">
             <Image className='filter brightness-0' src={planes} alt='' w={25} h={25} />
-            <p className=' w-[140px] font-poppins pl-2 font-medium'> Planes</p>
+            <p className=' w-[140px] font-poppins pl-2 font-medium flex items-center justify-between'>
+              <span> Planes  </span>
+            <Image className='filter brightness-0' src={dropdown} alt='' w={25} h={25} />
+            </p>
           </Link>
 
           <Link href="" className="flex justify-center items-center text-white">
             <Image className='filter brightness-0' src={amenities} alt='' w={25} h={25} />
-            <p className=' w-[140px] font-poppins pl-2 font-medium'> Amenities</p>
+            <p className=' w-[140px] font-poppins pl-2 font-medium flex items-center justify-between'>
+              <span> Alternatives  </span>
+            <Image className='filter brightness-0 ml-2' src={dropdown} alt='' w={25} h={25} />
+            </p>
           </Link>
 
           <Link href="" className=" h-[86px] flex justify-center items-center text-white">

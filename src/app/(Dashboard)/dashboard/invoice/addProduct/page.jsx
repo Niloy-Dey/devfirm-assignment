@@ -3,7 +3,7 @@ const AddProduct = () => {
 
     return (
         <div className='pb-10'>
-            <hr class="w-full border-t border-gray-300 my-4" />
+            <hr className="w-full border-t border-gray-300 my-4" />
             <div className='mt-10 justify-end flex '>
                 <div>
                     <p className='text-right'><span className='font-bold text-lg'>Subtotal: </span> 16.550.000</p>
@@ -15,7 +15,7 @@ const AddProduct = () => {
 
 
 
-            <hr class="w-full border-t border-gray-300 my-4" />
+            <hr className="w-full border-t border-gray-300 my-4" />
 
 
             {/* Save , cancel and download invoice button here  */}

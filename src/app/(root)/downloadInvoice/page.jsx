@@ -12,7 +12,7 @@ const DownloadInvoice = () => {
                         <p className="font-poppins  text-xl  "><span className="font-poppins font-bold text-xl  ">Invoice No</span > <span> #I909112</span></p>
                         <p className="text-lg font-poppins "><span className="font-bold ">Date :</span> 07/09/2022</p>
                     </div>
-                    <h1 class=" p-10 font-bold text-[#84878B] text-center font-poppins text-4xl leading-15">Logo</h1>
+                    <h1 className=" p-10 font-bold text-[#84878B] text-center font-poppins text-4xl leading-15">Logo</h1>
 
                     {/*Address start here  */}
                     <div className="text-right text-[#84878B]">
@@ -23,7 +23,7 @@ const DownloadInvoice = () => {
                         <p>+1 (226) 50 272383</p>
                     </div>
                 </section>
-                <hr class="w-full border-t border-gray-300 my-10" />
+                <hr className="w-full border-t border-gray-300 my-10" />
 
 
 
@@ -45,7 +45,7 @@ const DownloadInvoice = () => {
                         <p className="text-[#84878B]">finance@lizetransport.com</p>
                     </div>
                 </section>
-                <hr class="w-full border-t border-gray-300 mt-6 " />
+                <hr className="w-full border-t border-gray-300 mt-6 " />
 
 
 
@@ -90,7 +90,7 @@ const DownloadInvoice = () => {
                         </tbody>
                     </table>
                 </div>
-                <hr class="w-full border-t border-gray-300 mt-6 " />
+                <hr className="w-full border-t border-gray-300 mt-6 " />
 
 
 
@@ -111,7 +111,7 @@ const DownloadInvoice = () => {
                         </div>
                     </div>
 
-                    <hr class="w-full border-t border-gray-300 mt-6 " />
+                    <hr className="w-full border-t border-gray-300 mt-6 " />
 
                     <div className="flex justify-end ">
                         <div className="flex  text-[#CAE138] pt-4 justify-between font-bold">
@@ -120,7 +120,7 @@ const DownloadInvoice = () => {
                         </div>
                     </div>
                 </div>
-                <hr class="w-full border-t border-gray-300 mt-6 " />
+                <hr className="w-full border-t border-gray-300 mt-6 " />
 
 
                 {/* Footer */}

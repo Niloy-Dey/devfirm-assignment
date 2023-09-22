@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image';
-import { FaAngleDown, FaCalendar } from 'react-icons/fa';
+import { FaAngleDown, FaTrash, FaCalendar } from 'react-icons/fa';
 import upload from '/public/images/upload.png'
 import increase from '/public/images/increase.png'
 import Ddelete from '/public/images/delete.png'
@@ -12,7 +12,7 @@ const AddInvoice = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedOption, setSelectedOption] = useState('');
     const [searchText, setSearchText] = useState('');
-    const options = ['T2390', 'TR7652', 'TR7652']; 
+    const options = ['T2390', 'TR7652', 'TR7652'];
 
 
 
@@ -76,6 +76,40 @@ const AddInvoice = () => {
     };
 
 
+    // const [selectedImage, setSelectedImage] = useState(null);
+
+    // // Function for file input change
+    // const handleImageChange = (e) => {
+    //     const file = e.target.files[0];
+    //     if (file) {
+    //         const reader = new FileReader();
+    //         reader.onload = (e) => {
+    //             setSelectedImage(e.target.result);
+    //         };
+    //         reader.readAsDataURL(file);
+    //     }
+    // };
+
+
+    const [selectedImage, setSelectedImage] = useState(null);
+
+    // Function to handle file input change
+    const handleImageChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                setSelectedImage(e.target.result);
+            };
+            reader.readAsDataURL(file);
+        }
+    };
+
+    // Function to clear the selected image
+    const clearSelectedImage = () => {
+        setSelectedImage(null);
+    };
+
 
 
     return (
@@ -84,8 +118,8 @@ const AddInvoice = () => {
             {/* top section  */}
             <section className=' ml-7  py-8  pr-0 flex justify-between items-center '>
                 <div>
-                    <h1 class="font-poppins text-2xl font-semibold leading-10"> Invoices </h1>
-                    <p class="font-poppins text-base font-normal leading-6">invoices </p>
+                    <h1 className="font-poppins text-2xl font-semibold leading-10"> Invoices </h1>
+                    <p className="font-poppins text-base font-normal leading-6">invoices </p>
                 </div>
             </section>
 
@@ -96,14 +130,14 @@ const AddInvoice = () => {
                 <div>
                     <div className='flex justify-between items-center gap-6'>
                         <div className=' w-[596px] h-[60px]'>
-                            <label for="dropdown" class="font-poppins pl-1 font-bold text-lg text-black ">Select</label>
-                            <div class="relative  border border-gray-300 rounded-full mt-4 p-3">
-                                <select id="dropdown" class="appearance-none bg-transparent border-none outline-none w-full pr-8 pt-1 font-poppins text-lg pl-2">
+                            <label htmlFor="dropdown" className="font-poppins pl-1 font-bold text-lg text-black ">Select</label>
+                            <div className="relative  border border-gray-300 rounded-full mt-4 p-3">
+                                <select id="dropdown" className="appearance-none bg-transparent border-none outline-none w-full pr-8 pt-1 font-poppins text-lg pl-2">
                                     <option>Select Client </option>
                                     <option>Option 2</option>
                                     <option>Option 3</option>
                                 </select>
-                                <div class="absolute inset-y-0 right-0 flex items-center  pointer-events-none">
+                                <div className="absolute inset-y-0 right-0 flex items-center  pointer-events-none">
                                     <FaAngleDown className="h-[20px] w-[20px] mr-4 text-gray-400" />
                                 </div>
                             </div>
@@ -111,12 +145,12 @@ const AddInvoice = () => {
 
 
                         <div className='w-[300px] h-[60px] '>
-                            <label for="dropdown" class="font-poppins pl-1 font-bold text-lg text-black ">Invoice Date</label>
-                            <div class="relative  border border-gray-300 rounded-full mt-4 p-3">
-                                <select id="dropdown" class="appearance-none bg-transparent border-none outline-none w-full pr-8 pt-1 font-poppins text-lg pl-2">
+                            <label htmlFor="dropdown" className="font-poppins pl-1 font-bold text-lg text-black ">Invoice Date</label>
+                            <div className="relative  border border-gray-300 rounded-full mt-4 p-3">
+                                <select id="dropdown" className="appearance-none bg-transparent border-none outline-none w-full pr-8 pt-1 font-poppins text-lg pl-2">
                                     <option>Select Date </option>
                                 </select>
-                                <div class="absolute inset-y-0 right-0 flex items-center  pointer-events-none">
+                                <div className="absolute inset-y-0 right-0 flex items-center  pointer-events-none">
                                     <FaCalendar className="h-[20px] w-[20px] mr-4 text-gray-400" />
                                 </div>
                             </div>
@@ -174,20 +208,41 @@ const AddInvoice = () => {
 
                 {/* right part */}
                 <div>
-                    <p class="font-poppins pl-1 pb-3 font-bold text-lg text-black " >Plane Image</p>
-                    <div class="relative w-[230px] h-[170px]    border border-dashed border-[#CAE138] rounded-md flex items-center justify-center gap-10">
-                        <input type="file" class="opacity-0 absolute inset-0 w-full h-full cursor-pointer" name="file" id="file" />
-                        <label for="file" class="flex  items-center justify-center space-y-2 cursor-pointer">
-                            <Image className='w-14' alt='' src={upload} />
-                            <div className='p-2'>
-                                <p className='text-[#CAE138]  font-poppins text-lg'>Upload  </p>
-                                <p className='text-[#CAE138]  font-poppins text-lg' >Plane Image</p>
-                            </div>
+                    <p className="font-poppins pl-1 pb-3 font-bold text-lg text-black">Plane Image</p>
+                    <div className="relative w-[230px] h-[170px] border border-dashed border-[#CAE138] rounded-md flex items-center justify-center gap-10">
+                        <input
+                            type="file"
+                            className="opacity-0 absolute inset-0 w-full h-full cursor-pointer"
+                            name="file"
+                            id="file"
+                            onChange={handleImageChange}
+                        />
+                        <label htmlFor="file" className="flex items-center justify-center flex-col space-y-2 cursor-pointer">
+                            {selectedImage ? (
+                                <div className="relative">
+                                    <div className="relative w-[230px] h-[170px] rounded-lg overflow-hidden">
+                                        <img src={selectedImage} alt="Selected" className="w-full h-full object-cover rounded-lg" />
+                                        <div className="absolute top-0 right-0 -mt-2 -mr-2 flex items-center justify-center cursor-pointer">
+                                            <p onClick={clearSelectedImage} className="bg-white text-red-700 w-6 h-6 rounded-full text-center">X</p>
+                                        </div>
+                                    </div>
+                                    <p className="text-white font-bold absolute top-16 left-16 font-poppins text-lg mt-2 cursor-pointer">Change Photo</p>
+                                </div>
+                            ) : (
+                                <>
+                                    <div className="rounded-lg overflow-hidden absolute left-4 ">
+                                        <Image className="w-[50px] h-[50px] object-cover" alt="" src={upload} />
+                                    </div>
+                                    <div className="p-2 absolute left-20">
+                                        <p className="text-[#CAE138] font-poppins text-lg">Upload</p>
+                                        <p className="text-[#CAE138] font-poppins text-lg">Plane Image</p>
+                                    </div>
+                                </>
+                            )}
                         </label>
                     </div>
                 </div>
             </section>
-
 
 
 
@@ -259,10 +314,10 @@ const AddInvoice = () => {
                                 </td>
                                 <td>
                                     <div className='w-[200px] ml-40 flex mt-1 items-center justify-between h-[60px]'>
-                                        <div class="relative  border border-gray-300 rounded-lg mt-4 p-3">
-                                            <p class="appearance-none bg-transparent border-none outline-none w-full pr-8 pt-1 font-poppins text-lg pl-2">11.500.000</p>
+                                        <div className="relative  border border-gray-300 rounded-lg mt-4 p-3">
+                                            <p className="appearance-none bg-transparent border-none outline-none w-full pr-8 pt-1 font-poppins text-lg pl-2">11.500.000</p>
                                         </div>
-                                        <Image onClick={() => handleDeleteProduct(product.id)} className="cursor-pointer w-[60px] h-[50px] p-2 mt-3 ml-2 rounded-xl bg-red-100 " alt='' src={Ddelete} />
+                                        <Image onClick={() => handleDeleteProduct(product.id)} className="cursor-pointer w-[40px] h-[40px] p-2 mt-3 ml-2 rounded-xl bg-red-100 " alt='' src={Ddelete} />
                                     </div>
                                 </td>
                             </tr>
