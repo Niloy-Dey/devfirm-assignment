@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import home from '/public/images/Vector (1).png'
 import mobile from '/public/images/Vector (2).png'
-import trips from '/public/images/Vector (3).png'
+import trip from '/public/images/Vector (3).png'
 import invoice from '/public/images/Vector (4).png'
 import planes from '/public/images/Vector (5).png'
 import amenities from '/public/images/Vector (6).png'
@@ -42,7 +42,7 @@ const DashboardSideBar = () => {
 
 
           <Link href="" className=" h-[86px] flex justify-center items-center text-white">
-            <Image className='filter brightness-0' src={trips} alt='' w={25} h={25} />
+            <Image className='filter brightness-0' src={trip} alt='' w={25} h={25} />
             <p className=' w-[140px] font-poppins pl-2 font-medium flex items-center justify-between'>
               <span> Trips  </span>
             <Image className='filter brightness-0' src={dropdown} alt='' w={25} h={25} />
