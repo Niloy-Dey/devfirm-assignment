@@ -1,4 +1,3 @@
-import { FaCalendar, FaCog, FaComment, FaFileInvoice, FaHome, FaUser } from 'react-icons/fa';
 import Image from 'next/image';
 import home from '/public/images/Vector (1).png'
 import mobile from '/public/images/Vector (2).png'
@@ -14,7 +13,6 @@ import message from '/public/images/Vector (11).png.png'
 import calender from '/public/images/Vector (12).png'
 import settings from '/public/images/Vector (13).png'
 import logout from '/public/images/logout.png'
-import background from '/public/images/background.png'
 import Link from 'next/link';
 const DashboardSideBar = () => {
   return (
@@ -105,16 +103,8 @@ const DashboardSideBar = () => {
             <Image className='filter brightness-0' src={logout} alt='' w={25} h={25} />
             <p className=' w-[140px] font-poppins pl-2 font-medium'> Logout</p>
           </Link>
-
         </div>
-
-
       </div>
-
-
-
-
-
     </div>
   )
 }

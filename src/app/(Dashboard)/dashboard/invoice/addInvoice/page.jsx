@@ -1,6 +1,4 @@
 'use client'
-
-
 import Image from 'next/image';
 import { FaAngleDown, FaCalendar } from 'react-icons/fa';
 import upload from '/public/images/upload.png'
@@ -9,8 +7,7 @@ import Ddelete from '/public/images/delete.png'
 import search from '/public/images/search.png'
 import AddProduct from '../addProduct/page'
 import { useState } from 'react';
-import Link from 'next/link';
-const addInvoice = () => {
+const AddInvoice = () => {
 
     const [isOpen, setIsOpen] = useState(false);
     const [selectedOption, setSelectedOption] = useState('');
@@ -281,4 +278,4 @@ const addInvoice = () => {
     );
 };
 
-export default addInvoice;
+export default AddInvoice;

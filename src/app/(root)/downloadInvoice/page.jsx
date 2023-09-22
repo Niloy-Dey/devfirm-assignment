@@ -13,6 +13,8 @@ const DownloadInvoice = () => {
                         <p className="text-lg font-poppins "><span className="font-bold ">Date :</span> 07/09/2022</p>
                     </div>
                     <h1 class=" p-10 font-bold text-[#84878B] text-center font-poppins text-4xl leading-15">Logo</h1>
+
+                    {/*Address start here  */}
                     <div className="text-right text-[#84878B]">
                         <p>1474 Avenue Kwame</p>
                         <p>NKRUMAH 10 BP 13395</p>
@@ -112,7 +114,7 @@ const DownloadInvoice = () => {
                     <hr class="w-full border-t border-gray-300 mt-6 " />
 
                     <div className="flex justify-end ">
-                        <div className="flex  text-[#383FE1] pt-4 justify-between font-bold">
+                        <div className="flex  text-[#CAE138] pt-4 justify-between font-bold">
                             <p className="mr-8">Total :</p>
                             <p>19.350.000</p>
                         </div>

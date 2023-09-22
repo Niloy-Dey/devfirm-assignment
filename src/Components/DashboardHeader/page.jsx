@@ -7,6 +7,7 @@ const DashboardHeader = () => {
             {/* Header section start here  */}
             <section className="flex ml-7 px-4 pb-4 bg-white  items-center justify-between  w-[1350px] h-[119px]  rounded-lg">
 
+                {/*search bar start here  */}
                 <div className='mb-10'>
                     <div class="w-[476px]   h-[55px] absolute rounded-full border border-gray-300 flex items-center p-3">
                         <div class="text-gray-400 pr-2">
@@ -20,9 +21,6 @@ const DashboardHeader = () => {
                 <div className='' >
                     <Image src={icon} alt="" />
                 </div>
-
-
-
             </section>
 
         </>

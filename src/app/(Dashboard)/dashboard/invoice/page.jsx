@@ -13,6 +13,9 @@ const InvoicePage = () => {
                     <p class="font-poppins text-base font-normal leading-6">invoices </p>
                 </div>
 
+
+
+
                 <div>
                     <Link href="/dashboard/invoice/addInvoice " class="w-[250px] flex justify-center items-center h-[64px]  py-2 rounded-[34.67px] bg-[#CAE138] text-white ">
                         <span className="border-2  border-white rounded-full p-1 m-2">
@@ -22,6 +25,9 @@ const InvoicePage = () => {
                     </Link>
                 </div>
             </section>
+
+
+
 
             {/* bottom section  */}
             <InvoiceList></InvoiceList>
