@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import home from '/public/images/Vector (1).png'
 import mobile from '/public/images/Vector (2).png'
-import trip from '/public/images/Vector (3).png'
+// import trip from '/public/images/Vector (3).png'
+import trip from '/public/images/vector (3).png'
 import invoice from '/public/images/Vector (4).png'
 import planes from '/public/images/Vector (5).png'
 import amenities from '/public/images/Vector (6).png'
